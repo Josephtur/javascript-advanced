@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: 50px 1fr 40px;
+    grid-template-areas:  
+    "zh zh"
+    "zn zm"
+    "zf zf";
+}
+
+header{
+    grid-area: zh;
+    background-color: #88877d;
+    color: aqua;
+    display: flex;
+    align-items: center;
+    padding: 0.1rem;
+}
+
+nav{
+    grid-area: zn;
+    background-color: rgba(119, 110, 110, 0.6);
+    color: black;
+    padding: 1rem;
+}
+
+main{
+    grid-area: zm;
+    background-color: beige;
+    color: black;
+    padding: 1rem;
+}
+
+footer{
+    grid-area: zf;
+    background-color: rgb(108, 104, 104);
+    color: beige;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Mi pagina web tendra este aspecto hasta 768px que es el mayor porcentaje de dispositivos portatiles en vertical = tablet en vertical*/
+@media (max-width: 768px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 25px 25px 1fr 15px;
+        grid-template-areas: 
+            "zh"
+            "zn"
+            "zm"
+            "zf";
+    }
+
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+}
+
+.thumb{
+    width: 600px;
+    transition: opacity 0.3s;
+}
