@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <script src="assets/js/script.js" defer></script>
+    <title>JS - Advance</title>
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+       <form id="regForm">
+        <label>
+            Usuario:
+            <input type="text" id="user" required>
+            <!-- <small> lo utilizamos en formularios para describir el tipo de error  -->
+            <small class="error" id="errUser"></small>
+        </label><br>
+
+        <label>
+            Email:
+            <input type="email" id="email" required>
+            <small class="error" id="errEmail"></small>
+        </label><br>
+
+        <label>
+            Contraseña: 
+            <input type="password" id="pwd" required>
+            <small class="error" id="errPwd"></small>
+        </label><br>
+
+        <label>
+            Confirmar contraseña: 
+            <input type="password" id="pwd2" required>
+            <small class="error" id="errPwd2"></small>
+        </label><br>
+        <button type="submit">Registrar</button>
+    </form>
+    
+    <div id="result"></div>
+    
+    </main>
+    <footer></footer>
+</body>
+</html>

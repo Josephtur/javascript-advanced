@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 25% 1fr;
+    grid-template-rows: 50px 1fr 40px;
+    grid-template-areas:  
+    "zh zh"
+    "zn zm"
+    "zf zf";
+}
+
+header{
+    grid-area: zh;
+    background-color:#d0ac2c;
+    color: aqua;
+    display: flex;
+    align-items: center;
+    padding: 0.1rem;
+}
+
+nav{
+    grid-area: zn;
+    background-color: #c09212b7;
+    color: black;
+    padding: 1rem;
+}
+
+main{
+    grid-area: zm;
+    background-color: #faf6e5;
+    color: black;
+    padding: 1rem;
+    display: flex;
+    /* mover con align-items flex-star arriba - center medio - end abajo */
+    align-items: flex-start; 
+    justify-content: center;
+    
+}
+
+footer{
+    grid-area: zf;
+    background-color:#d0ac2c;
+    color: rgb(9, 9, 9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*Mi pagina web tendra este aspecto hasta 768px que es el mayor porcentaje de dispositivos portatiles en vertical = tablet en vertical*/
+@media (max-width: 768px){
+    body{
+        grid-template-columns: 1fr;
+        grid-template-rows: 25px 25px 1fr 15px;
+        grid-template-areas: 
+            "zh"
+            "zn"
+            "zm"
+            "zf";
+    }
+
+    nav{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+
+}
+
