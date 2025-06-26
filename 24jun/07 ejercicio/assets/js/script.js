@@ -12,5 +12,5 @@ slider.addEventListener('input', () =>{
     // formula : g = 255 - (v*2.55)
     const g = 255 - Math.round(v*2.55);
     // cambiar el fondo ndel body
-    document.body.style.backgroundColor = `rgb(${g},${g},${g})`;
+    document.main.style.backgroundColor = `rgb(${g},${g},${g})`;
 });
